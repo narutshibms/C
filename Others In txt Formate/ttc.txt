@@ -1,0 +1,11 @@
+double TTC,HT,TVA,kl;
+
+  cout <<"Le nombre de kilos de tomates achetés : ";
+  cin >>kl;
+  cout <<"Le prix HT d'un kilo de tomates : ";
+  cin>>HT;
+  cout <<"Le taux de TVA : ";
+  cin >>TVA;
+
+  TTC =(HT+(HT*TVA/100))*kl;
+  cout <<"TTC est :  "<<TTC;

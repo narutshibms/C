@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int getmin(int *a,int n ,int k)
+{    int min = a[k];
+    int pos = k;
+     int tmp=0;
+
+     for(int i=k+1 ; i<n ; i++)
+         if(min>a[i])
+            {
+            min = a[i];
+            pos = i;
+            }
+
+            tmp=a[k];
+             a[k] =a[pos];
+             a[pos] = tmp;
+
+}
+
+int main()
+{
+
+ int a[]={4,5,2,3,0,-1,7,15,77,-77,32,31,5};
+
+ for(int i=0 ; i<(13); i++)
+  {
+          getmin(a,13,i);
+          printf("  %d  ",a[i]);
+  }
+
+
+
+
+
+
+return 0;
+}

@@ -1,0 +1,16 @@
+char a[7]="LKNAECD";
+ char b[7];
+    int c=0,temp=0;
+
+     for(int c=0 ; c<6 ; c++)
+     {
+         for(int j=c ; j<7 ; j++)
+
+         if( a[c]>a[j+1])
+         {
+         temp=a[c];
+         a[c]=a[j+1];
+         a[j+1]=temp;
+         }
+
+     }

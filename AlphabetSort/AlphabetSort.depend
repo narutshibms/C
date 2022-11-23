@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1647192649 source:c:\users\mr-xx\documents\c projects\alphabetsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.c"
+
+1647175765 c:\users\mr-xx\documents\c projects\alphabetsort\add.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1647193796 c:\users\mr-xx\documents\c projects\alphabetsort\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1647192649 source:c:\users\mr-xx\videos\alphabetsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.c"
+
+1647193796 c:\users\mr-xx\videos\alphabetsort\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

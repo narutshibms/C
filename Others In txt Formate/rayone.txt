@@ -1,0 +1,8 @@
+   double r,v;
+
+
+   cout <<"donner le rayon : ";
+   cin >>r;
+
+   v = (4/3)*PI*r*r*r;
+  cout <<"le volume est : "<<v;

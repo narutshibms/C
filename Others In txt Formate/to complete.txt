@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <time.h>
+
+ typedef struct ma{
+     int **m;
+     int nc;
+     int nl;
+
+ }matrice;
+
+int nl1(matrice A)
+{
+    return A.nl;
+}
+int nc1(matrice B)
+{
+
+    return B.nc;
+
+}
+void pr(matrice A )
+{
+     printf("nombre of lignes are  : %d   ",A.nl);
+     printf("nombre of columons are  : %d ",A.nc);
+}
+
+matrice  ini(matrice A)
+{
+    for(int i=0 ; i<A.nl; i++)
+    for(int ii=0 ; ii<A.nc; ii++)
+     A.m[i][ii] = rand()%10;
+
+     return A;
+}
+
+
+
+
+int main() {
+
+    srand(time(0));
+    matrice A;
+
+    A.nc=4;
+    A.nl=4;
+
+    printf("\n %d",nl1(A));
+    printf("\n %d",nc1(A));
+    pr(ini(A));
+
+
+
+
+
+    return 0;
+}

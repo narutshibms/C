@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int deco(int *a,int ele,int s,int end)
+{
+    int  temp = (end+s)/2;
+    
+    if ( ele > a[temp])
+        deco(  a , ele ,temp, end);
+    
+    else if( ele < a[temp] )
+        deco( a,ele,s,temp);
+    else
+         return temp;
+}
+
+
+
+int main()
+{
+    int a[]={11,21,31,41,51,61,71,81,91,100,101,115,177,188};
+    int end = sizeof(a)/sizeof(a[0]);
+    int s=0,element;
+    printf("\n put the number you're looking for : ");
+    scanf("%d",&element);
+
+   printf("%d",(deco(a,element,s,end)+1));
+
+    return 0;
+}

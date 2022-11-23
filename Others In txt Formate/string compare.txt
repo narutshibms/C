@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int stringcompare(char *a , char *b)
+
+{    int ii=0,s1=0,s2=0;
+     int k1 = sizeof(a)/sizeof(a[0]);
+
+
+
+        while( ii<k1)
+    {
+         if(  b[ii]  > a[ii])
+             s2++;
+         else if(  b[ii]  < a[ii])
+             s1++;
+
+
+        ii++;
+    }
+
+     if(s2>s1)
+        return 2;
+     else if(s2<s1)
+        return 1;
+     else return 0;
+
+
+}
+
+int main()
+{  char a[]="amir";
+  char b[]="AMAL";
+    printf("%d",stringcompare(a,b));
+
+
+    return 0;
+}

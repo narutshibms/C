@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int gett(const char c, const int p);
+char sett(char c,int p,int val);
+char coder(char c);
+void tobin(const char c, char*t);
+
+int gett(const char c, const int p)
+{
+    if(p >=0 && p<8)
+        return ((c&(1 << p))? 1:0);
+    printf("Depassement du l'intervale");
+    exit(2);
+
+}
+
+char sett(char c,int p,int va1)
+{
+    if( va1== 0)
+        c&=-(1<<p);
+    else c|=(1<<p);
+    return c;
+}
+char coder(char c)
+{
+    char s;
+    int i,tp[8]= {2,0,1,3,4,7,6,5};
+    for(i=0; i<8; i++)
+        s=sett(s,tp[i],gett(c,i));
+    return s;
+}
+
+int main()
+{
+    int i,j;
+    //char *c;
+    char *c = (char*) malloc(sizeof(char)*40);
+    printf("ENTREZ UNe chaine de CARACTERE\t");
+    gets(c);
+    for(i=0; i<strlen(c); i++)
+    {
+        printf("\n %c:%d:",c[i],c[i]);
+       
+    }
+
+ return 0;
+    }

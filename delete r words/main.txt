@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+char* delete1(char *b , char *a ,int pos ){
+     strcpy (b, a);
+      for (int u = 0; u < pos; u++)
+    {
+      for (int i = 0; i < pos; i++)
+	{
+
+       if ( i!=u && b[u] == a[i])
+	      b[i] = ' ';
+	  else
+	    continue;
+	}
+    }
+    return b;
+}
+
+int calcul(char *T ,int  l){
+    int i=0 ;
+    int counter = 0;
+while ( i < l ){
+
+if( T[i] != ' ')
+    {
+       counter = counter + 1;
+    }
+
+    i++;
+}
+    return counter;
+
+}
+char* delete2(char *st , char *tab,int lengh){
+
+    int i=0,j=0;
+
+
+
+    while( i < lengh)
+{
+    if( st[i] != ' ' )
+    {  tab[j] = st[i];
+     i++;
+     j++;
+
+    }
+    else
+    i++;
+
+}
+
+
+    return tab;
+
+
+}
+
+
+int main ()
+{
+
+//65/90
+
+  char a[] = "HEKKIWIRKDSSDAAD";
+  int pos = strlen (a);
+  char b[pos];
+
+
+ printf("after deleted deleted chars :  %s \n\n",delete1( b,a,pos));
+ int esp = calcul(b,pos);
+ char temp[esp];
+ printf("string after deleted spaces : %s",delete2(b,temp,pos));
+
+
+
+  return 0;
+}

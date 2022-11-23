@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int aff_1D_2d(int *T,int n)
+{
+    for(int i=0 ; i<n ; i++)
+    {
+        for(int j=0 ; j<n ; j++)
+        {
+            if(T[j]==i)
+                printf("| %2d ",T[j]);
+            else
+                printf("| %2d ",0);
+        }
+    printf("\n");
+    }
+}
+
+
+int main()
+{
+int n;
+srand(time(0));
+    printf("donner le nombre delements : ");
+    scanf("%d",&n);
+    int *T = (int) calloc(n,(sizeof(int)));
+    for(int i=0 ; i<n ; i++)
+      T[i] = rand()%n+1 ;
+
+    aff_1D_2d(T,n);
+
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+void un();
+int main()
+{
+    int a,b,c;
+    printf("Give the size of your Matrix .\n Lines : ");
+    scanf("%d",&a);
+    printf("And colons : ");
+    scanf("%d",&b);
+    printf("put the caracter which you want to use ? : ");
+    scanf("%d",&c);
+ un(&a,&b,&c);
+
+    return 0;
+}
+void un(int* a,int* b,int* c){
+
+printf("\n");
+    for (int i=0 ; i<*a ; i++)
+    {
+    for (int j=0 ; j<*b ; j++)
+        {
+            printf("%d",*c);
+        }
+
+    printf("\n");
+
+    }
+
+}

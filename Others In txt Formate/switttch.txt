@@ -1,0 +1,20 @@
+char a;
+int h=4;
+
+ cout <<"donner un char (a/b/c) pour faire un operation : \n\n" ;
+ cout<<"variable value : "<<h<<"\n\n";
+ cout <<"a.  Ajouter 1 \n";
+ cout <<"b. Multiplier par 2 \n" ;
+ cout <<"c. Soustraire 3 \n" ;
+ cout <<"d. Quitter \n" ;
+
+ cout <<"\n le char est : ";cin>> a;
+ switch(a)
+ {
+ case 'a' :  h++; cout<<h;break;
+     case 'b' : h*2; cout <<h;break;
+     case 'c' : h-3; cout<<h ;break;
+     case 'd' :
+     default:
+        cout<<"exit success !.";
+ }

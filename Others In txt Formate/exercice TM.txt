@@ -1,0 +1,247 @@
+#include <iostream>
+#include <math.h>
+#define PI 3.1416
+
+using namespace std;
+
+/// declaring functions ///
+
+class Definefunc
+{
+public :
+
+    void lists(); // list of operations !.
+
+    void addto();
+    void ttc();
+    void moy();
+    void swp();
+    void rect();
+    void rayone();
+    void choix(char k); //1ere switch
+
+    void autre(); // 2eme switch for other operations
+} c;
+
+//
+int main(void)
+{
+    char k;
+
+    c.lists(); // operation lists .
+    cout<<"\t your option is : ";
+    cin>>k;
+    if( k == 'M')
+       c.autre(); // second operation menue .
+    else
+       c.choix(k) ;  // first operations menue.
+
+
+
+    return 0;
+}
+
+
+
+
+/// functions defining //
+void Definefunc::addto()
+{
+
+    int i=0,tmp;
+    cout <<"donner  i : " ;
+    cin>>i;
+    tmp =i;
+    cout <<"la valuer  de variable i  est "<<i<<endl;
+    i++;
+    cout<<"1ere facon est  i++    = "<<i<<endl;
+    i=tmp;
+    ++i;
+    cout<<"2eme facon est  ++i    = "<<i<<endl;
+    i=tmp;
+    i=i+1;
+    cout<<"3eme facon est  i=i+1  = "<<i<<endl;
+    i=tmp ;
+    i+=1;
+    cout<<"4eme facon est  i+=1   = "<<i<<endl;
+
+
+}
+
+void Definefunc::ttc()
+{
+
+    double TTC,HT,TVA,kl;
+
+    cout <<"Le nombre de kilos de tomates achetés : ";
+    cin >>kl;
+    cout <<"Le prix HT d'un kilo de tomates : ";
+    cin>>HT;
+    cout <<"Le taux de TVA : ";
+    cin >>TVA;
+
+    TTC =(HT+(HT*TVA/100))*kl;
+    cout <<"TTC est :  "<<TTC;
+
+}
+
+void Definefunc::moy()
+{
+
+    double  a,b=0 ;
+
+    cout <<"enter  five of numbers :";
+
+    for(int i=0 ; i<5 ; i++)
+    {
+        cin  >>a;
+        b= i + b;
+    }
+    cout <<" leur moyenne est :"<<b/5;
+}
+
+void Definefunc::swp()
+{
+    int a,b,c,tmp;
+
+    cout <<"entre la valuer de A : "<<endl;
+    cin >>a;
+    cout <<"entre la valuer de B : "<<endl;
+    cin>>b;
+    cout <<"entre la valuer de C : "<<endl;
+    cin >>c;
+
+    tmp= b;
+    b=a;
+    a=c;
+    c=tmp;
+    cout <<"la valeur de A = "<<a<<endl;
+    cout <<"la valeur de B = "<<b<<endl;
+    cout <<"la valeur de C = "<<c<<endl;
+
+
+
+}
+
+void Definefunc::rect()
+{
+    double largeur,longueur,surface,perimetre;
+    do
+    {
+        cout << "entre  longueur et  largeur de rectangle : " << endl;
+        cout << "pour  longueur :  " ;
+        cin >> longueur;
+        cout << "\npour largeur  : ";
+        cin >>largeur;
+    }
+    while( largeur < 0 && longueur <0);
+
+    perimetre = (longueur+largeur)*2;
+    surface    = (longueur*largeur);
+    cout<< "la surface de rectangle est : "<<surface<<endl;
+    cout<< "la perimetre de rectangle est : "<<perimetre<<endl;
+}
+
+void Definefunc::rayone()
+{
+    double r,v;
+
+
+    cout <<"donner le rayon : ";
+    cin >>r;
+
+    v = (4/3)*PI*r*r*r;
+    cout <<"le volume est : "<<v;
+}
+void Definefunc::autre()
+{
+
+    char a;
+    int h;
+
+
+
+
+    cout <<"donner un char (a/b/c) pour faire un operation : \n\n" ;
+
+    cout<<"la variable value : ";
+    cout<<h;
+    cout<<"\n\n";
+    cout <<"a. Ajouter 1 \n";
+    cout <<"b. Multiplier par 2 \n" ;
+    cout <<"c. Soustraire 3 \n" ;
+    cout <<"d. Quitter \n" ;
+
+    cout <<"\n le char est : ";
+    cin>> a;
+    cout<<"donner la variable value : ";
+    cin>>h;
+
+    switch(a)
+    {
+    case 'a' :
+        cout<<h<<"++  = "<<++h;
+        break;
+    case 'b' :
+        cout <<h<<"*2 = "<<h*2;
+        break;
+    case 'c' :
+        cout<<h<<"-3  = "<<h-3;
+        break;
+    case 'd' :
+    default:
+        cout<<"exit success !.";
+    }
+
+}
+
+void Definefunc::lists()
+{
+
+    cout<<"  operations List : \n\n";
+    cout<<"-  to add 1 to your variable in 4 different ways press 'A' ."<<"\n\n";
+    cout<<"-  to calcule price TTC press 'B'. "<<"\n\n";
+    cout<<"-  to calcule average of five numbers press 'C'. "<<"\n\n";
+    cout<<"-  to swap 3 variables between them press 'D'.  "<<"\n\n";
+    cout<<"-  to calcule perimeter and area of rectangle press 'E'."<<"\n\n";
+    cout<<"-  to calcule Volume of a sphere press 'F' "<<"\n\n";
+    cout<<"for more operations Press M . \n";
+    cout<<"\n\n  |----------------------------|\n\n"<<"\n\n";
+
+
+}
+
+void Definefunc::choix(char k)
+{
+
+    switch(k)
+    {
+    case 'A' :
+        c.addto();
+        break;
+    case 'B' :
+        c.ttc();
+        break;
+    case 'C' :
+        c.moy();
+        break;
+    case 'D' :
+        c.swp();
+        break;
+    case 'E' :
+        c.rect();
+        break;
+    case 'F' :
+        c.rayone();
+        break;
+    default :
+        cout<<"operation not found !.";
+    }
+
+}
+
+
+
+
+
+

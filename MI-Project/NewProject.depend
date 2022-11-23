@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1649207679 source:c:\users\mr-xx\desktop\newproject\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Df.h"
+	"Df.c"
+
+1649207588 c:\users\mr-xx\desktop\newproject\df.h
+
+1649208497 c:\users\mr-xx\desktop\newproject\df.c
+	<stdio.h>
+	<stdlib.h>
+	"Df.h"
+	"Display.c"
+	"Allocatio.c"
+
+1649208281 c:\users\mr-xx\desktop\newproject\display.c
+	<stdio.h>
+	"Df.h"
+
+1649208391 c:\users\mr-xx\desktop\newproject\allocatio.c
+	<stdio.h>
+	<stdlib.h>
+	"Df.h"
+

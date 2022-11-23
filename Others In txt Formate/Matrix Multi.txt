@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+ int mul(int l1,int c1, int l2,int c2);
+  //void display(int a[][c1],int *b,int *c,int l1,int l2,int c1,int c2);
+
+int main()
+{
+
+ srand(time(0));
+ int l1,c1;
+ int l2,c2;
+
+
+    printf("enter r&c of M1 : ");
+    scanf("%d%d",&l1,&c1);
+  printf("\n\n enter r&c of M2 : ");
+    scanf("%d%d",&l2,&c2);
+
+
+  mul(l1,c1,l2,c2);
+
+
+
+
+
+    return 0;
+}
+
+int mul(int l1,int c1, int l2,int c2)
+{
+    int a[l1][c1];
+    int b[l2][c2];
+    int c[l1][c2];
+
+
+    for(int i=0 ; i<l1; i++)
+    for(int j=0 ; j<c1;j++)
+    a[i][j] = rand()%5;
+
+    for(int i=0 ; i<l2; i++)
+    for(int j=0 ; j<c2;j++)
+    b[i][j] = rand()%5;
+
+   for(int i=0 ; i<l1; i++)
+   for(int j=0 ; j<c2;j++)
+     c[i][j] = 0;
+
+
+    for(int i=0 ; i<l1 ; i++)
+        for(int j=0 ; j<c2 ; j++)
+          for(int n=0 ; n<c1 ; n++)
+            c[i][j] =  a[i][n]*b[n][j] +  c[i][j] ;
+
+
+for(int i=0 ; i<l1; i++){
+    for(int j=0 ; j<c1;j++)
+    printf(" %d ",a[i][j] );
+    printf("\n");}
+
+printf("\n\n");
+
+    for(int i=0 ; i<l2; i++){
+    for(int j=0 ; j<c2;j++)
+    printf(" %d ",b[i][j] );
+    printf("\n");
+    }
+printf("\n\n");
+
+   for(int i=0 ; i<l1; i++){
+   for(int j=0 ; j<c2;j++)
+     printf(" %d ",c[i][j] );
+     printf("\n");}
+
+
+
+ //display(a,b,c,l1,l2,c1,c2);
+
+
+
+}
+
+/* void display(int a[][c1] ,int b,int c,int l1,int l2,int c1,int c2)
+ {
+    for(int i=0 ; i<l1; i++){
+    for(int j=0 ; j<c1;j++)
+    a[i][j] = rand()%5;
+    printf("\n");}
+
+    for(int i=0 ; i<l1; i++){
+    for(int j=0 ; j<c1;j++)
+    b[i][j] = rand()%5;
+    printf("\n");
+    }
+
+   for(int i=0 ; i<l1; i++){
+   for(int j=0 ; j<c2;j++)
+     c[i][j] = 0;
+     printf("\n");}
+
+ }*/
+
+

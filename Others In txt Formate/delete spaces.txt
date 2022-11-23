@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int calcul(char *T ,int  l){
+    int i=0 ; 
+    int counter = 0;
+while ( i < l ){
+    
+if( T[i] != ' ')
+    {
+       counter = counter + 1;   
+    }
+    
+    i++;
+}
+    return counter;
+    
+}
+char* delete(char *st , char *tab,int lengh){
+    
+    int i=0,j=0;
+   
+   
+     
+    while( i < lengh)
+{
+    if( st[i] != ' ' )
+    {  tab[j] = st[i];
+     i++;
+     j++;
+        
+    }
+    else 
+    i++;
+    
+}    
+    
+
+    
+    
+    
+}
+
+
+int main()
+{    
+    
+    
+    char st[] = "H M D L L H- A W DD I A    N    A    N N N N  - I- L O VE -YOU  " ;
+   int  tomme = 0 ;
+int lengh = strlen(st) ;
+tomme = calcul(st , lengh) ;
+    char tab [tomme];
+    printf("%d\n",tomme);
+  delete(st,tab,lengh);
+  
+  for(int k=0 ;k<tomme ; k++)
+  printf("%c",tab[k] );
+   
+    
+    return 0;
+}

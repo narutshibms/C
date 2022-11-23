@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+int main()
+{
+
+int n,c,i;
+
+printf("---------------------------------------------\n");
+printf("            Pyramid generator : \n");
+printf("---------------------------------------------\n");
+
+printf("give number of lines for pyramide   : ");
+scanf("%d",&n);
+printf("\n");
+for(int i =1 ; i<= n ;i++){
+for(int k=1 ;k<=(2*n-1);k++){
+
+    if( k>= (n-(i-1)) &&  k<=(n+(i-1)) )
+       printf("x ");
+       else
+        printf("  ");
+
+}
+printf("\n");
+}
+
+
+
+
+return 0;}
+

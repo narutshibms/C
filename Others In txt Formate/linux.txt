@@ -1,0 +1,28 @@
+non, le répertoire rep est vide et ne contient aucun fichier.
+
+after execurtin "ls -ai" it shows address of cache just . 
+
+and after  execute "ls -ali" it shows address of caches and modified time and size of it in bytes and also username and all of it has saperated in columns.  
+
+
+the command "ls -id rep" shows after executing address of  the repertoire given.
+
+the command "ls -id ~" shows address of the Home repertoire. (address  /home).
+
+the command ("ls -ali ~/rep" and "ls --ali") are giving the same results which is details of (rep&rep1) directory . results come first by address of files &(cache) , last modified time , user access name ,and 
+
+some expressions with unknow names such  " drwxr-xr-x ".
+
+ the command ("ls -ail ../.. " & "ls-ail~") shows the same result that is the same as last 2 commands : ("ls -ali ~/rep" and "ls --ali") 
+
+but not only shows details of (rep&rep1) but also shows all systemes directories details exclude /Home &/music /videos and caches and all other hidden files.
+
+in conclusion both of  ("ls -ali ~/rep" and "ls --ali") && ("ls -ail ../.. " & "ls-ail~")  but the last two are more general and shows all directory details .
+
+8-9 : after executing command ("touch fich1.txt" && "touch fich2") it's creat fich.txt and fich2 as doc in directory rep.
+
+"cd .." :after executing this command which it takes you 2 steps back ,we I execute ("rmdir") which would delete directory rep but this command canot delete the directory rep .
+
+and to know why this command cannot delete it we have to test ("ls -la rep ") , after executing this command it shows that still there some cashes and data in rep althought we have deleted (fich1 & fich2).
+
+conclusion ->> the reason why rep cannot be deleted is that it still contien many data such caches for that the command "rmdir" cannot delete it . 

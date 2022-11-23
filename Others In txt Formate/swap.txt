@@ -1,0 +1,16 @@
+   int a,b,c,tmp;
+
+    cout <<"entre la valuer de A : "<<endl;
+    cin >>a;
+    cout <<"entre la valuer de B : "<<endl;
+    cin>>b;
+    cout <<"entre la valuer de C : "<<endl;
+    cin >>c;
+
+    tmp= b;
+    b=a;
+    a=c;
+    c=tmp;
+      cout <<"la valeur de A = "<<a<<endl;
+      cout <<"la valeur de B = "<<b<<endl;
+      cout <<"la valeur de C = "<<c<<endl;

@@ -1,0 +1,15 @@
+    double largeur,longueur,surface,perimetre;
+    do
+    {
+        cout << "entre  longueur et  largeur de rectangle : " << endl;
+        cout << "pour  longueur :  " ;
+        cin >> longueur;
+        cout << "\npour largeur  : ";
+        cin >>largeur;
+    }
+    while( largeur < 0 && longueur <0);
+
+    perimetre = (longueur+largeur)*2;
+    surface    = (longueur*largeur);
+    cout<< "la surface de rectangle est : "<<surface<<endl;
+    cout<< "la perimetre de rectangle est : "<<perimetre<<endl;

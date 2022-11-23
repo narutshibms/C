@@ -1,0 +1,16 @@
+int V(int n )
+{
+ if(n==0)
+    return 3;
+ else if (n==1)
+     return 1;
+ return   U(n-2) + U(n-1);
+}
+
+int U( int n  )
+{
+    if(n==0 || n==1)
+        return 2;
+
+    return (U(n-2) + ((-1)^n)*V(n-1));
+}

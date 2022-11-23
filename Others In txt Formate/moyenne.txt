@@ -1,0 +1,11 @@
+    double  a,b=0 ;
+
+
+    cout <<"enter  five of numbers :";
+
+    for(int i=0 ; i<5 ; i++)
+    {
+        cin  >>a;
+        b= i + b;
+    }
+    cout <<" leur moyenne est :"<<b/5;

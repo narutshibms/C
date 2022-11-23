@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int decosearch(int *a,int target, int start, int end )
+{
+    int m = (start + end)/2;
+
+    if (  m >=start && m <= end    )
+    {
+        if( target == a[m])
+            return m;
+      else {
+
+        if(  target > a[m])
+            decosearch(a,target,m+1,end);
+        else
+            decosearch(a,target,start,m-1);
+      }
+    }
+
+    else
+        return -1;
+
+}
+
+int main()
+{
+
+
+    int T[]= {7,8,9,14,17,19,31,80};
+    int target;
+    scanf("%d",&target);
+    int saver = decosearch(&T,target,0,7);
+    printf("%d",saver);
+
+
+
+    return 0;
+}

@@ -1,0 +1,8 @@
+.size() --> to calcul number of char
+.erase() --> to delete a specific char in string.
+.sbustr() --> can get a part of string to u.
+.insert () --> can add a char to ur string .
+to open structure with pointer we 
+use : cin>>(*pointer_name).member.
+- structure can coppied. && cannot add two structures.
+-

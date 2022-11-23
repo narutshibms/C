@@ -1,0 +1,732 @@
+algorithme le_résultat
+
+variables : M,P,F,A,H : Réel 
+
+début 
+ecrire("s'il vous plait enrée le nombre des etudiant dans le etablisment : ")
+lire(n)
+
+pour i<- 1 à n faire 
+
+ecrire(entre les reslutat final pour chaque matiére  : )
+
+ecrireln("pour etudiant : ",i)
+ecrire("    math     : ")
+lire(M)
+
+ecrireln(" Physique  : ")
+lire(P)
+
+ecrireln(" Français  : ")
+lire(F)
+
+ecrireln(" Anglais   : ")
+lire(A)
+
+ecrireln(" Histoire  : ")
+lire(H)
+ 
+F <-- (M*5 + F*4 + P*5 + A*2 + H*2)/18
+ecrireln("ton résultat est : ",F,"/20")
+fin.
+
+-----------------------------------------------------------------------------------------------------
+Ex : 5 - Q1  :
+
+algorithme Leproduit 
+variables  a,b : réel 
+début 
+
+Afficher("enre un nombre a et b : ")
+saisir(a,b)
+
+ si(a*b=0) alors
+
+afficher(le produit de deux nombre est null)
+   
+ 
+sinon 
+
+
+ si (a*b>0) alors
+
+afficher("le produit de deux nombre est positif")
+
+sinon
+
+afficher(le produit de deux nombre est négatif)
+
+    finsi
+
+
+fin si
+fin.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+algorithme  title
+var a , b : entiers
+
+début
+
+afficher(veu vuellez entrée l'àge de l'enfant   : )
+sasir(a)
+
+si (a>=6 et a <= 7 )
+
+afficher("sa catégorie est  : « Poussin »") 
+sinon
+
+si (a>=8 et a<= 9 )
+
+afficher(" sa catégorie  est  : « Pupille»") 
+sinon
+
+si (a >= 10 et a <= 11 )
+
+afficher(" sa catégorie   est : « Minime»") 
+sinon 
+
+si ( a>=12 )
+
+afficher("sa catégorie  est  : « Cadet» ") 
+
+finsi
+finsi
+finsi
+finsi
+
+
+fin
+--------------------------------------------------------------------------------------------------------------------
+
+algorithme remise
+var a : réel
+
+début 
+
+afficher(entre le ton mountant en DH :  )
+saisir(a)
+si ( a >= 2000 et a<=5000 )alors
+afficher(le remise est  : 1%)
+sinon 
+si(a >= 5000) alors
+afficher(le remise est  : 2%)
+finsi
+finsi
+
+fin.
+-------------------------------------------------------------------------------------------------------------------------
+[EX : 6 ]  : 
+Algorithme titile 
+var n,i:entier
+début 
+Afficher("Veuillez saisir un numéro  : ")
+lire(n)
+pour i <-- 0 à n faire
+ecrire("le multiplication de",n,"est" : )
+ecrireln(n,"x",i,"=",i*n)
+finpour
+
+fin .
+
+
+-------
+Q2 : 
+
+Algorithme   Factoriel
+variables  f,n,i:entier
+
+début
+ 
+afficher(veuillez entrée un nombre pour calcul sa factoriel   : )
+saisir(n)
+f<--1
+pour i <-- 1 à n faire
+
+f <-- i*f
+finpour
+afficher("le facoriel de ",n,"est : ")
+
+fin .
+-------
+Q3 : 
+
+Algorithme   lasommme
+variables  i,s,a: entier 
+
+début
+ 
+afficher("veuillez entrée un nombre  : ")
+saisir(a)
+s<--0
+pour i <-- i = 0 à i < a faire
+
+s <-- s + i 
+finpour
+
+afficher("la somme de nombres  jusqu à ",a,"est  : ",s)
+
+fin.
+------------- 
+Ex 7 ; Q1 : 
+
+
+Algorithme title_12
+
+variables a,b : réel 
+
+b <-- 1.5
+
+début
+
+pour i <-- 1 à 3 faire
+afficher("veuillez entrée un nombre compris entre 1 et 3  : ")
+saisir(a)
+si (a = b)alors 
+afficher("ton réponse est vrai")
+i <--3
+sinon 
+afficher("ton réponse est faux ! ")
+finsi
+finpour
+
+fin 
+
+--------------------------------------------
+Q2 : 
+
+Algorithme title_12
+
+variables 
+i : entier
+a,b : réel 
+
+b <-- 17.5
+
+début
+
+pour i <-- 1 à 3 faire
+afficher("veuillez entrée un nombre compris entre 10 et 20  : ")
+saisir(a)
+si (a< 10 ) alors 
+afficher(" Plus grand ! ")
+sinon
+si (a > 20) alors 
+afficher("Plus petit !")
+sinon
+si (a = b)alors 
+afficher("ton réponse est vrai")
+i <--3
+sinon 
+afficher("ton réponse est faux ! ")
+finsi 
+finsi
+finsi
+
+fin.
+------------------------------------------------------------------------------------------------------
+Q3 : 
+Algorithme title_13 
+variables  n : entier  
+
+début 
+afficher("veuillez entrée un nombre  : ")
+saisir(n)
+ pour i<-- n+1 à n+10 faire
+ afficher(i)
+ finpour
+
+fin
+------------------------------------------------------------------
+Q4 : 
+Algorithme title_jjq
+ 
+variables  a,i,s,k,co,p,m: entiers
+N: tableau[0..-1] de entiers
+début 
+
+afficher("veuillez entrée un nombre : ")
+pour i<-- 0 à -1 faire 
+saisir(N[i])
+si (N[i] = 0) alors 
+i <- -1 
+sinon 
+i <-- i +0 
+finpour 
+
+s <-- N[0]
+pour k <-- 0 à -1 faire
+si ( s <= N[k])alors 
+s <-- N[k]
+sinon 
+s <-- 0+s
+finsi 
+fin pour
+
+
+afficher("le plus grand nombre est : ",s)
+pour n <-- 0 à -1 faire 
+si (s = N[n]) alors
+afficher("lui position est : ",i)
+n <-- -1
+sinon 
+s <-- 0+s
+finsi
+finpour
+
+m <-- N[0]
+pour p <-- 0 à -1 faire
+si ( s >= N[k])alors 
+s <-- N[k]
+sinon 
+s <-- 0+s
+finsi 
+fin pour
+
+
+
+
+
+fin 
+--------------------------------------------------------------------------------------------------
+
+algorithme title12
+
+variables  a,s,p,j,n: entiers
+N: tableau[0..-1] de entiers
+début 
+i<--0
+afficher("veuillez entrée un nombre : ")
+saisir(N[i])
+s <-- N[0]
+p <-- N[0]
+
+tantque ( N[i] != 0 ) faire
+
+i <-- i +1
+saisir(N[i])
+   si ( s >= N[i]) alors 
+    s <-- N[i]
+	sinon 
+	si (p < = N[i] ) alors 
+	 p<--N[i]
+ sinon
+ p <--  p + 0
+finsi 
+finsi 
+fin tantque
+
+
+afficher("le plus grand nombre est : ",s)
+afficher("le plus petit nombre est : ",p) 
+
+pour j< 1 à -1 faire
+  si (N[j] = s) alors 
+  ecrie("le posittion de plu grand nombre est : ", j)
+   j <- -1 
+  sinon
+ s <-- 0 + s   
+ finsi 
+ finpour
+ 
+ pour n<- 1 à -1 faire
+  si (N[n] = p) alors 
+  ecrie("le posittion de plus petit nombre est : ", n)
+   n <- -1 
+  sinon
+ n <-- 0 + n 
+ finsi 
+ finpour
+ 
+fin
+
+
+-------------------------------------------------------------------------------------------
+algorithme l'achats.
+variables n,s ,p: entiers
+début 
+
+afficher("Quel est le prix d'achat ? ")
+saisir(n)
+
+afficher("combien allez-vous payer : ")
+saisir(p)
+s <-- p-n
+afficher(" le reste est  : " ,s)
+saisir(s)
+
+
+fin 
+------------------------------------------------------------------------------------------------------------------------------
+
+Exercice 8 , Q1 : 
+
+Algorithme titre_1 
+
+variables m ,s,p: chàne de charactere
+           counter : entier
+counter <-- 0
+début 
+
+afficher("marié ou célibataire ?")
+saisir(m)
+si ( m = marié )alors
+counter <-- counter + 25
+sinon 
+counter <-- counter + 20
+finsi
+
+
+afficher("Avez-vous des enfants  ,(oui ou non )?")
+saisir(p)
+si ( p = oui ) alors
+afficher("Combien y en a-t-il ?")
+saisir(c)
+counter <-- 20 * c + counter
+finsi
+
+afficher("A combien s'élève votre salaire mensuel en DH?")
+saisir(s)
+si(s <= 600) alors 
+counter <-- counter + 10
+sinon 
+counter <-- 0 + counter
+finsi
+
+si (counter <= 50 ) alors 
+afficher(" la participation à laquelle il a droit est : ",counetr)
+sinon
+afficher("Vous n'êtes pas éligible pour participer.")
+
+fin
+-----------------------------------------------------------------------------------------------------------------------------------------
+Q2 et Q3 : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+exercice 9  Q1: 
+
+algorithme  titre_12
+Variable i : Entier
+Tableau C : Tab_Entier(6)
+DEBUT
+POUR i←1 A 6
+saisir(C [i])
+FIN POUR
+POUR i ← 1 A 6
+C [i] ← C [i] * C [i]
+FIN POUR
+POUR i ← 1 A 6
+Afficher (C [i])
+FIN POUR
+FIN 
+
+
+Affichage  : 
+C[i]^2  , i={2,5,3,10,4,2}: 
+
+2  *  2  = 4
+5  *  5  = 25
+3  *  3  = 9
+10 *  10 = 100
+4  *  4  = 16
+2  *  2  =  4
+
+
+---------------------------------------------------------------------------------
+Q2
+le but de cet algorithme est de calculer les bornes de la suite numérique
+qui défini par :
+
+U1&2 <--1
+U (n) <- U (n-2) + U (n-1)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Q 3. Considérons le programme suivant :
+Tableau X : Tab_Entier(2 ,3)
+Variables i , j , val : Entiers
+DEBUT
+val ← 1
+
+POUR i ← 1 A 2
+POUR j ← 1 A 3
+X [i ][ j] ← val
+val ← val + 1
+FIN POUR
+FIN POUR
+
+POUR i ← 1 A 2
+POUR j ← 1 A 3
+Afficher( X [i ][ j])
+FIN POUR
+FIN POUR
+
+a. Que produit l’exécution de ce programme.
+b. le produit l’exécution de ce programme est  : 
+
+
+
+ j = 1    j =2    j=3
+_________________________
+|   1   |   2	|   3  	|    i  = 1
+|_______|_______|_______|	      
+|    4  |  5	|  6    |    i  = 2
+|_______|_______|_______|	
+
+
+
+
+----------------------------------------------------------------------------------------------------
+ex 9 , Q4 : 
+Q 4. Quel résultat fournira ce programme :
+Tableau X [4][ 2] : Tab_Entier(4,2)
+Variables k , m : Entiers
+DEBUT
+
+POUR k ← 1 A 4
+POUR m ← 1 A 2
+X [k ][ m] ← k + m
+FIN POUR
+FIN POUR
+POUR k ← 1 A 4
+POUR m ← 1 A 2
+Afficher( X [k][ m])
+FIN POUR
+FIN POUR
+
+anwser : le résultat de ce programme est  : 
+
+
+
+ m = 1    m =2    
+_________________
+|   2   |   3	|  k = 1
+|_______|_______|	      
+|   3   |  4	|  k = 2
+|_______|_______|
+|    4  |  5	|  k = 3
+|_______|_______|
+|    5  |  6	|  k = 4
+|_______|_______|
+. 
+
+*---------------------------------------------------------------------------------------------------------------------------
+Exercice 10 : 
+Q1 : 
+Algorithme 
+--------------------------
+Ex11 ,  Q1 programme on c : 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i = 1, n = 1, k = 1, somme, T[20];
+
+    printf("veuillez entrée 20 nombre affilee : \n");
+
+    while (i <= 20)
+    {
+        printf("entree la nombre %d : ", i);
+        scanf("%d", &T[i]);
+        i++;
+    }
+
+    somme = 0;
+    while (n <= 20)
+    {
+
+        somme = somme + T[n];
+        n++;
+    }
+
+    printf("le resultat de la somme de les elements de tableau N est : \t %d ", somme);
+
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------
+Q2 Ex11  : 
+
+algorithme  programme
+
+variables i,s,n: entier
+T: tableau[20] de entiers 
+debut 
+
+ecrire ("Veuillez entrer 20 numéros d'affilée : ")
+pour i <-- 1 à 20 faire
+lire (T[i])
+finpour 
+
+s<--T[0]
+
+pour n <-- 1 à 20 faire 
+
+ si (s <= T[n]) alors 
+ 
+ s <-- T[n]
+ sinon 
+s <-- s + 0
+finpour
+afficher ("le plus grand nomre dans le tableu est : ",s)
+fin.
+-------------------------------------------------------------------------------------------------
+Q3 Ex 11: 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i = 1, n = 1, k = 1, counter;
+    float T[5];
+    printf("veuillez entrée 20 nombre affilee : \n");
+
+    while (i <= 5)
+    {
+        printf("entrée la note  %d : ", i);
+        scanf("%f", &T[i]);
+        i++;
+    }
+
+    counter = 0;
+    while (n <= 20)
+    {
+        if (T[n] >= 10 && T[n] <= 20)
+        {
+            counter = counter + 1;
+        }
+        else
+        {
+            counter = counter + 0;
+        }
+        n++;
+    }
+
+    printf(" le nombre de notes qui plus grand dans la moyen est  :  %d ", counter);
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------
+
+Ex 12 : 
+algorithme  programme
+
+variables i,n,s,spos,sneg,counter,X: entier
+T: tableau[20][50] de reel 
+debut 
+
+ecrire ("Veuillez complete ce tableau par entrée les nombres : ")
+pour i <-- 1 à 20 faire
+pour c <-- 1 à 50 faire  
+lire (T[i][c])
+finpour 
+finpour
+counter <-- 0 
+pour  i <-- 1 à 20 faire 
+pour  c <-- 1 à 50 faire 
+counter <-- counter + T[i][c]
+finpour 
+finpour 
+ecrire ("la somme des élement de tableau est : ",counter)
+
+// Q-b 
+counter <-- 0 
+pour  i <-- 1 à 20 faire 
+pour  c <-- 1 à 50 faire 
+ si ( T[i][c] > 0 ) alors 
+ counter  <-- counter +1 
+ sinon 
+ counter <-- 0 +counter 
+ finsi 
+ finpour
+ finpour
+ ecrire (" le nombre des element dans ce tableau est : ",counter )
+ 
+ // Q-c : 
+ spos <-- 0 
+ sneg <-- 0 
+ pour  i <-- 1 à 20 faire 
+pour  c <-- 1 à 50 faire 
+
+ si ( T[i][c] > 0 )alors 
+ spos <-- spos + T[i][c] 
+ sinon 
+  sneg <-- T[i][c]+ sneg 
+finsi 
+finpour
+finpour 
+ecrire (" la somme des element positifs est: " spos)
+ecrire ("la somme des element negatife est : ",sneg )
+
+/////////// Q-d : 
+pour  i <-- 1 à 20 faire 
+pour  c <-- 1 à 50 faire 
+
+ si (pg <= T[i][c] )alors 
+ pg <-- T[i][c] 
+ sinon 
+ pg <-- 0+ pg
+finsi 
+finpour
+finpour 
+/// Q-e
+  pour  i <-- 1 à 20 faire 
+pour  c <-- 1 à 50 faire 
+ si (pg = T[i][c] ) alors 
+ 
+  ecrire("le position de plus grand nombre est : ",T[i][c])
+  sinon 
+  pg <-- pg + 0 
+finsi
+finpour
+finpour
+
+ //////// Q--f
+ecrire (" Veuillez entrer le nombre que vous voulez savoir combien de
+ fois il a été répété :")
+lire (X)
+counter <-- 0 
+pour  i <-- 1 à 20 faire 
+pour  c <-- 1 à 50 faire 
+si (w = [i][c]) alors 
+counter <-- 1 +counter 
+sinon 
+counter <-- counter + 0
+finsi
+finpour
+finpour
+ecrire ("Le numéro a été répété ",X," , ",counter,"fois")
+fin.
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

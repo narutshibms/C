@@ -1,0 +1,12 @@
+  int i=0;
+
+  cout <<"le nomme de variable est i. " <<endl;
+   i++;
+   cout<<"1ere facon est  i++    = "<<i<<endl;
+   i=0;++i;
+   cout<<"2eme facon est  ++i    = "<<i<<endl;
+   i=0;
+   i=i+1;
+   cout<<"3eme facon est  i=i+1  = "<<i<<endl;
+   i=0 ;i+=1;
+   cout<<"4eme facon est  i+=1   = "<<i<<endl;s

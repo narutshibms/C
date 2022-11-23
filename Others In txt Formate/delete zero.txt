@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int count(int*a,int size)
+{
+    int counter=0,i=0;
+    while(i<size)
+    {
+        if(   a[i] != 0 )
+            counter++;
+        i++;
+    }
+    return counter;
+}
+void int delet(int *a,int size)
+{
+  int size2=count(a,size);
+  int j=0;
+    int *b = (int*)malloc(size2*sizeof(int));
+    for(int i=0 ; i<size;i++)
+    {
+        if(  a[i] != 0)
+        {
+            b[j] = a[i];
+            j++;
+
+        }
+    }
+      display(b,size2);
+      
+}
+
+int display(int *b,int size)
+{   int i=0;
+    printf("returned array is : ");
+    while( i<size)
+    {
+        printf("%d  ",*(b+i));
+        i++;
+    }
+}
+
+int main()
+{
+
+      int a[]={0, 0, 1, 2 ,0 ,3 ,0, 0 ,0 ,4, 4 ,0 ,0, 5};
+      int k=sizeof(a)/sizeof(a[0]);
+       delet(a,k);
+
+
+    return 0;
+}
